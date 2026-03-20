@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F9F7F3;
-  --foreground: #1A1A1A;
-  --surface: #FFFFFF;
-  --border: #E8E2D9;
-  --muted: #6B6560;
-  --subtle: #F3F0EB;
+  --background: #FFFFFF;
+  --foreground: #1D1D1F;
+  --surface: #F5F5F7;
+  --border: #D2D2D7;
+  --muted: #86868B;
+  --subtle: #F5F5F7;
+  --accent: #7C3AED;
+  --accent-light: #F5F3FF;
 }
 
 @theme inline {
@@ -23,7 +25,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, var(--font-sans), 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,7 +34,7 @@ html[data-scroll-behavior] {
   scroll-behavior: smooth;
 }
 
-/* Warm scrollbar */
+/* Minimal scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -42,16 +44,16 @@ html[data-scroll-behavior] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4CFC8;
+  background: #C7C7CC;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B0AAA2;
+  background: #8E8E93;
 }
 
 /* Selection */
 ::selection {
-  background: #A7F3D0;
-  color: #064E3B;
+  background: #DDD6FE;
+  color: #4C1D95;
 }

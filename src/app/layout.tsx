@@ -31,10 +31,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col" style={{ background: '#F9F7F3' }}>
+      <body className="min-h-full flex flex-col bg-white">
         <AuthProvider>
           <Navbar />
-          <main className="flex-1 pt-16">{children}</main>
+          <main className="flex-1 pt-12">{children}</main>
           <Footer />
         </AuthProvider>
       </body>

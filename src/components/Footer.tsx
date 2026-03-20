@@ -4,37 +4,34 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1A1A1A' }}>
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer style={{ background: '#F5F5F7' }}>
+      <div className="max-w-[980px] mx-auto px-5 sm:px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">G</span>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-7 h-7 bg-violet-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-semibold text-xs">G</span>
               </div>
-              <div className="leading-tight">
-                <span className="text-[15px] font-semibold text-white tracking-tight">Green Grove</span>
-                <span className="block text-[9px] text-gray-500 tracking-wider uppercase">Thiruvananthapuram</span>
-              </div>
+              <span className="text-sm font-semibold text-[#1D1D1F]">Green Grove</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-[#86868B] text-xs leading-relaxed">
               A premium 2-acre open-air event venue amidst lush greenery and coconut trees in Thiruvananthapuram, Kerala.
             </p>
           </div>
 
           <div>
-            <h3 className="font-medium text-gray-300 text-sm mb-4">Quick Links</h3>
-            <div className="space-y-2.5">
-              <Link href="/venue" className="block text-gray-500 hover:text-gray-300 text-sm transition">Our Venue</Link>
-              <Link href="/services" className="block text-gray-500 hover:text-gray-300 text-sm transition">Services</Link>
-              <Link href="/pricing" className="block text-gray-500 hover:text-gray-300 text-sm transition">Pricing</Link>
-              <Link href="/contact" className="block text-gray-500 hover:text-gray-300 text-sm transition">Contact Us</Link>
+            <h3 className="font-medium text-[#1D1D1F] text-xs mb-3">Quick Links</h3>
+            <div className="space-y-2">
+              <Link href="/venue" className="block text-[#86868B] hover:text-[#1D1D1F] text-xs transition">Our Venue</Link>
+              <Link href="/services" className="block text-[#86868B] hover:text-[#1D1D1F] text-xs transition">Services</Link>
+              <Link href="/pricing" className="block text-[#86868B] hover:text-[#1D1D1F] text-xs transition">Pricing</Link>
+              <Link href="/contact" className="block text-[#86868B] hover:text-[#1D1D1F] text-xs transition">Contact Us</Link>
             </div>
           </div>
 
           <div>
-            <h3 className="font-medium text-gray-300 text-sm mb-4">Event Types</h3>
-            <div className="space-y-2.5 text-sm text-gray-500">
+            <h3 className="font-medium text-[#1D1D1F] text-xs mb-3">Event Types</h3>
+            <div className="space-y-2 text-xs text-[#86868B]">
               <p>Weddings & Receptions</p>
               <p>Corporate Events</p>
               <p>Family Celebrations</p>
@@ -44,26 +41,26 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-medium text-gray-300 text-sm mb-4">Contact</h3>
-            <div className="space-y-2.5 text-sm text-gray-500">
+            <h3 className="font-medium text-[#1D1D1F] text-xs mb-3">Contact</h3>
+            <div className="space-y-2 text-xs text-[#86868B]">
               <p>Thiruvananthapuram, Kerala</p>
               <p>India - 695001</p>
               <p className="pt-1">
-                <a href="mailto:hello@greengrove.in" className="text-emerald-500 hover:text-emerald-400 transition">hello@greengrove.in</a>
+                <a href="mailto:hello@greengrove.in" className="text-violet-600 hover:text-violet-700 transition">hello@greengrove.in</a>
               </p>
               <p>
-                <a href="tel:+914712345678" className="hover:text-gray-300 transition">+91 471 234 5678</a>
+                <a href="tel:+914712345678" className="hover:text-[#1D1D1F] transition">+91 471 234 5678</a>
               </p>
-              <p className="text-xs text-gray-600 pt-1">WhatsApp: +91 98765 43210</p>
+              <p className="text-[10px] text-[#86868B] pt-1">WhatsApp: +91 98765 43210</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderTop: '1px solid #2A2A2A' }}>
-          <p className="text-gray-600 text-xs">
+        <div className="mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-3" style={{ borderTop: '1px solid #D2D2D7' }}>
+          <p className="text-[#86868B] text-[10px]">
             &copy; {new Date().getFullYear()} Green Grove Events. All rights reserved.
           </p>
-          <p className="text-gray-600 text-xs">
+          <p className="text-[#86868B] text-[10px]">
             Serving NRI families from Middle East, Europe, US & Australia
           </p>
         </div>

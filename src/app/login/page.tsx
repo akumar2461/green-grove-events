@@ -41,34 +41,34 @@ export default function LoginPage() {
     setLoading(false);
   };
 
-  const inputClass = 'w-full px-4 py-2.5 text-sm text-gray-900 rounded-xl outline-none transition focus:ring-2 focus:ring-emerald-500 focus:border-transparent';
+  const inputClass = 'w-full rounded-xl px-4 py-2.5 text-sm text-[#1D1D1F] outline-none transition focus:ring-2 focus:ring-violet-500';
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-12 px-4" style={{ backgroundColor: '#F9F7F3' }}>
+    <div className="min-h-screen flex items-center justify-center py-12 px-4" style={{ backgroundColor: '#F5F5F7' }}>
       <div className="w-full max-w-md">
         {/* Logo and heading */}
         <div className="text-center mb-10">
-          <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-5">
+          <div className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center mx-auto mb-5">
             <span className="text-white font-bold text-sm">G</span>
           </div>
-          <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">
+          <h1 className="text-2xl font-semibold text-[#1D1D1F] tracking-tight">
             {isLogin ? 'Welcome back' : 'Create your account'}
           </h1>
-          <p className="text-gray-500 text-sm mt-2">
+          <p className="text-[#86868B] text-sm mt-2">
             {isLogin ? 'Sign in to manage your bookings' : 'Register to book your dream event'}
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-2xl p-8" style={{ border: '1px solid #E8E2D9' }}>
+        <div className="bg-white rounded-2xl p-8" style={{ border: '1px solid #D2D2D7' }}>
           {/* Tab toggle */}
-          <div className="flex rounded-xl p-1 mb-8" style={{ border: '1px solid #E8E2D9' }}>
+          <div className="flex rounded-xl p-1 mb-8" style={{ border: '1px solid #D2D2D7' }}>
             <button
               onClick={() => setIsLogin(true)}
               className={`flex-1 py-2 text-sm font-medium rounded-lg transition-all ${
                 isLogin
-                  ? 'bg-white shadow-sm text-emerald-600'
-                  : 'text-gray-500 hover:text-gray-700'
+                  ? 'bg-violet-600 text-white'
+                  : 'text-[#86868B] hover:text-[#1D1D1F]'
               }`}
             >
               Sign In
@@ -77,8 +77,8 @@ export default function LoginPage() {
               onClick={() => setIsLogin(false)}
               className={`flex-1 py-2 text-sm font-medium rounded-lg transition-all ${
                 !isLogin
-                  ? 'bg-white shadow-sm text-emerald-600'
-                  : 'text-gray-500 hover:text-gray-700'
+                  ? 'bg-violet-600 text-white'
+                  : 'text-[#86868B] hover:text-[#1D1D1F]'
               }`}
             >
               Register
@@ -87,7 +87,7 @@ export default function LoginPage() {
 
           {/* Error message */}
           {error && (
-            <div className="bg-white border-l-4 border-red-500 text-red-700 text-sm rounded-r-lg px-4 py-3 mb-6" style={{ border: '1px solid #E8E2D9', borderLeft: '4px solid #ef4444' }}>
+            <div className="bg-white rounded-r-lg px-4 py-3 mb-6 text-sm text-[#1D1D1F]" style={{ border: '1px solid #D2D2D7', borderLeft: '4px solid #dc2626' }}>
               {error}
             </div>
           )}
@@ -95,32 +95,32 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-5">
             {!isLogin && (
               <div>
-                <label className="block text-sm font-medium text-gray-900 mb-1.5">Full Name *</label>
+                <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">Full Name *</label>
                 <input
                   type="text"
                   required
                   value={form.full_name}
                   onChange={e => setForm({...form, full_name: e.target.value})}
                   className={inputClass}
-                  style={{ border: '1px solid #E8E2D9' }}
+                  style={{ border: '1px solid #D2D2D7' }}
                 />
               </div>
             )}
 
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-1.5">Email *</label>
+              <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">Email *</label>
               <input
                 type="email"
                 required
                 value={form.email}
                 onChange={e => setForm({...form, email: e.target.value})}
                 className={inputClass}
-                style={{ border: '1px solid #E8E2D9' }}
+                style={{ border: '1px solid #D2D2D7' }}
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-900 mb-1.5">Password *</label>
+              <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">Password *</label>
               <input
                 type="password"
                 required
@@ -128,44 +128,44 @@ export default function LoginPage() {
                 value={form.password}
                 onChange={e => setForm({...form, password: e.target.value})}
                 className={inputClass}
-                style={{ border: '1px solid #E8E2D9' }}
+                style={{ border: '1px solid #D2D2D7' }}
               />
             </div>
 
             {!isLogin && (
               <>
                 <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-1.5">Phone (with country code)</label>
+                  <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">Phone (with country code)</label>
                   <input
                     type="tel"
                     value={form.phone}
                     onChange={e => setForm({...form, phone: e.target.value})}
                     className={inputClass}
-                    style={{ border: '1px solid #E8E2D9' }}
+                    style={{ border: '1px solid #D2D2D7' }}
                     placeholder="+971 50 123 4567"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-1.5">Country</label>
+                    <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">Country</label>
                     <select
                       value={form.country}
                       onChange={e => setForm({...form, country: e.target.value})}
                       className={inputClass}
-                      style={{ border: '1px solid #E8E2D9' }}
+                      style={{ border: '1px solid #D2D2D7' }}
                     >
                       <option value="">Select...</option>
                       {countries.map(c => <option key={c} value={c}>{c}</option>)}
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-900 mb-1.5">City</label>
+                    <label className="block text-sm font-medium text-[#1D1D1F] mb-1.5">City</label>
                     <input
                       type="text"
                       value={form.city}
                       onChange={e => setForm({...form, city: e.target.value})}
                       className={inputClass}
-                      style={{ border: '1px solid #E8E2D9' }}
+                      style={{ border: '1px solid #D2D2D7' }}
                     />
                   </div>
                 </div>
@@ -174,9 +174,9 @@ export default function LoginPage() {
                     type="checkbox"
                     checked={form.marketing_opt_in}
                     onChange={e => setForm({...form, marketing_opt_in: e.target.checked})}
-                    className="mt-0.5 rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                    className="mt-0.5 rounded border-[#D2D2D7] text-violet-600 focus:ring-violet-500"
                   />
-                  <label className="text-sm text-gray-500 leading-relaxed">
+                  <label className="text-sm text-[#86868B] leading-relaxed">
                     I&apos;d like to receive updates about promotions, new services, and special offers from Green Grove Events.
                   </label>
                 </div>
@@ -186,7 +186,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-emerald-600 text-white py-3 rounded-full font-semibold hover:bg-emerald-700 transition-colors disabled:opacity-50 mt-2"
+              className="w-full bg-violet-600 text-white py-3 rounded-full font-semibold hover:bg-violet-700 transition-colors disabled:opacity-50 mt-2"
             >
               {loading ? 'Please wait...' : isLogin ? 'Sign In' : 'Create Account'}
             </button>
@@ -195,8 +195,8 @@ export default function LoginPage() {
 
         {/* Admin hint */}
         {isLogin && (
-          <p className="text-center text-xs text-gray-500 mt-6">
-            Admin credentials: <code className="font-mono text-gray-500">admin@greengrove.in</code> / <code className="font-mono text-gray-500">admin123</code>
+          <p className="text-center text-xs text-[#86868B] mt-6">
+            Admin credentials: <code className="font-mono text-[#86868B]">admin@greengrove.in</code> / <code className="font-mono text-[#86868B]">admin123</code>
           </p>
         )}
       </div>
