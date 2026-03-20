@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "green-grove",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "next", "dev"],
+      "autoPort": true
+    }
+  ]
+}
